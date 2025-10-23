@@ -1,0 +1,13 @@
+/.angular
+/.nx
+/coverage
+/dist
+/tmp
+/out-tsc
+/bazel-out
+/typings
+node_modules
+.idea/
+.project
+.classpath
+.c9/

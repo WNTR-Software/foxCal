@@ -1,0 +1,39 @@
+tabWidth: 4
+useTabs: true
+
+semi: true
+trailingComma: all
+bracketSameLine: true
+bracketSpacing: true
+singleQuote: false
+
+printWidth: 120
+
+overrides:
+  - files: "*.html"
+    options:
+      bracketSameLine: true
+  - files: "*.md"
+    options:
+      printWidth: 80
+
+
+plugins:
+  - "@trivago/prettier-plugin-sort-imports"
+
+importOrder:
+  - "@angular/core"
+  - "@angular/common"
+  - "^@angular/(.*)$"
+  - "^rxjs/(.*)$"
+  - "<THIRD_PARTY_MODULES>"
+  - "^~/services/(.*)$"
+  - "^~/layouts/(.*)$"
+  - "^~/components/(.*)$"
+  - "^~/models/(.*)$"
+  - "^[./]"
+  - "^@fontsource/(.*)$"
+importOrderSeparation: false
+importOrderParserPlugins:
+  - typescript
+  - decorators
