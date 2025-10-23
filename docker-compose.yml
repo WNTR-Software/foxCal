@@ -1,0 +1,15 @@
+services:
+    foxcal-backend:
+        image: WNTR/foxcal-backend
+        build:
+            context: backend
+            dockerfile: ./Dockerfile
+    foxcal-frontend:
+        image: WNTR/foxcal-frontend
+        build:
+            context: frontend
+            dockerfile: ./Dockerfile
+
+    # todo databases (postgres, valkey, etc.)
+
+# volumes:
