@@ -40,6 +40,10 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "loader": {
+              ".woff": "file",
+              ".woff2": "file"
+            },
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
@@ -49,7 +53,13 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "@fontsource/atkinson-hyperlegible-mono/400.css",
+              "@fontsource/atkinson-hyperlegible-mono/700.css",
+              "@fontsource/atkinson-hyperlegible/400.css",
+              "@fontsource/atkinson-hyperlegible/700.css",
+              "@fontsource/nunito-sans/400.css",
+              "@fontsource/nunito-sans/700.css"
             ]
           },
           "configurations": {
