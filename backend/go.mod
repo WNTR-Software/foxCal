@@ -1,3 +1,3 @@
-module WNTR-Software/foxCal/frontend
+module WNTR-Software/foxCal/backend
 
 go 1.25.3
