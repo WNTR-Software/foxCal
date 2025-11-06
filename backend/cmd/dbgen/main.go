@@ -5,13 +5,13 @@ import (
 	"flag"
 
 	"git.mstar.dev/mstar/goutils/other"
+	"github.com/glebarez/sqlite"
 	"github.com/rs/zerolog/log"
-	"gorm.io/driver/postgres"
 	"gorm.io/gen"
 	"gorm.io/gorm"
 
-	"WNTR-Software/foxCal/backend/config"
-	"WNTR-Software/foxCal/backend/storage/models"
+	"github.com/WNTR-Software/foxcal/backend/config"
+	"github.com/WNTR-Software/foxcal/backend/storage/models"
 )
 
 func main() {
@@ -37,15 +37,15 @@ func main() {
 	})
 
 	// Init the db, required to know which syntax to use
-	gormdb, _ := gorm.Open(postgres.Open(config.Global.Db.BuildPostgresDSN()), &gorm.Config{})
+	gormdb, _ := gorm.Open(sqlite.Open(config.Global.Db.SqliteFile), &gorm.Config{})
 	g.UseDB(gormdb)
 
 	// Apply the basic operations
 	g.ApplyBasic(models.AllModels...)
 
 	// Then link the custom queries to their relevant models
-	g.ApplyInterface(func(models.ILink) {}, models.Link{})
-	g.ApplyInterface(func(models.IUpcomingEvent) {}, models.UpcomingEvent{})
+	// g.ApplyInterface(func(models.ILink) {}, models.Link{})
+	// g.ApplyInterface(func(models.IUpcomingEvent) {}, models.UpcomingEvent{})
 
 	// And build
 	g.Execute()
