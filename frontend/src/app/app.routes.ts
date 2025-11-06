@@ -1,5 +1,6 @@
 import { Routes } from "@angular/router";
 import { HomeView } from "./views/home/home.view";
+import { AboutView } from "./views/about/about.view";
 
 export const routes: Routes = [
 	{
@@ -7,4 +8,9 @@ export const routes: Routes = [
 		path: "",
 		component: HomeView,
 	},
+	{
+		title: "foxCal - About",
+		path: "about",
+		component: AboutView,
+	}
 ];
