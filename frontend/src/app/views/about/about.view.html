@@ -1,9 +1,11 @@
-<h1 class="text-3xl lg:text-5xl mb-6 font-bold font-title">About foxCal</h1>
-<h2 class="text-xl lg:text-3xl mb-3 font-title">
+<h1 class="text-3xl lg:text-5xl mb-6 font-bold font-title" i18n="about header">About foxCal</h1>
+<h2 class="text-xl lg:text-3xl mb-3 font-title" i18n="about subheader">
 	A simple, open source Calendar Server with support for CalDav
 </h2>
 <p class="my-1">
-	Learn more about foxCal on
+	<ng-container i18n="about description|text posted just before the github link of foxCal">
+		Learn more about foxCal on
+	</ng-container>
 	<a
 		class="text-secondary underline hover:text-primary"
 		href="https://github.com/WNTR-Software/foxCal"
@@ -13,4 +15,6 @@
 	</a>
 </p>
 
-<p>foxCal is licensed under EUPL v1.2 (EUROPEAN UNION PUBLIC LICENCE v. 1.2)</p>
+<p i18n="about license|license text at the end of the about page">
+	foxCal is licensed under EUPL v1.2 (EUROPEAN UNION PUBLIC LICENCE v. 1.2)
+</p>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="8806174020293702272" datatype="html">
+        <source>About foxCal</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/about/about.view.html</context>
+          <context context-type="linenumber">1,2</context>
+        </context-group>
+        <note priority="1" from="description">about header</note>
+      </trans-unit>
+      <trans-unit id="6794938701164932218" datatype="html">
+        <source> A simple, open source Calendar Server with support for CalDav
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/about/about.view.html</context>
+          <context context-type="linenumber">3,6</context>
+        </context-group>
+        <note priority="1" from="description">about subheader</note>
+      </trans-unit>
+      <trans-unit id="1586172636431071492" datatype="html">
+        <source> Learn more about foxCal on </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/about/about.view.html</context>
+          <context context-type="linenumber">7,11</context>
+        </context-group>
+        <note priority="1" from="description">text posted just before the github link of foxCal</note>
+        <note priority="1" from="meaning">about description</note>
+      </trans-unit>
+      <trans-unit id="7247085914955145178" datatype="html">
+        <source> foxCal is licensed under EUPL v1.2 (EUROPEAN UNION PUBLIC LICENCE v. 1.2)
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/views/about/about.view.html</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+        <note priority="1" from="description">license text at the end of the about page</note>
+        <note priority="1" from="meaning">about license</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
