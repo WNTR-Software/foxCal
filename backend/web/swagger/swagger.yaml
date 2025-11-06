@@ -1,0 +1,82 @@
+basePath: /
+definitions:
+  web.KV:
+    properties:
+      key:
+        type: string
+      value:
+        type: string
+    type: object
+  web.Rfc9457Placeholder:
+    properties:
+      reference:
+        type: string
+      status:
+        type: integer
+      title:
+        type: string
+      type:
+        type: string
+    type: object
+host: foxcal.example.com
+info:
+  contact: {}
+  description: The API for the Foxcal service
+  license:
+    name: European Union Public License 1.2
+    url: https://eupl.eu/1.2/en/
+  title: Foxcal API
+  version: "0.1"
+paths:
+  /sampleKv:
+    post:
+      consumes:
+      - application/json
+      description: create or update key-value pair
+      operationId: create-or-update-kv
+      parameters:
+      - description: Key value data
+        in: body
+        name: input
+        required: true
+        schema:
+          $ref: '#/definitions/web.KV'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: No response body
+          schema:
+            type: string
+        "500":
+          description: RFC9457 problem details
+          schema:
+            $ref: '#/definitions/web.Rfc9457Placeholder'
+      summary: Create or update a key-value pair
+  /sampleKv/{id}:
+    get:
+      description: get value of key
+      operationId: get-kv-value
+      parameters:
+      - description: Key to get
+        in: path
+        name: key
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: The key value pair found
+          schema:
+            $ref: '#/definitions/web.KV'
+        "404":
+          description: No key-value pair found
+          schema:
+            $ref: '#/definitions/web.Rfc9457Placeholder'
+        "500":
+          description: RFC9457 problem details
+          schema:
+            $ref: '#/definitions/web.Rfc9457Placeholder'
+      summary: Get the value for a key
+swagger: "2.0"
