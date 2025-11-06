@@ -60,6 +60,9 @@
               "@fontsource/atkinson-hyperlegible/700.css",
               "@fontsource/nunito-sans/400.css",
               "@fontsource/nunito-sans/700.css"
+            ],
+            "polyfills": [
+              "@angular/localize/init"
             ]
           },
           "configurations": {
