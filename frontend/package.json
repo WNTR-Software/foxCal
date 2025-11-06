@@ -10,8 +10,6 @@
     "pretty": "npx prettier src --write"
   },
   "prettier": {
-    "printWidth": 100,
-    "singleQuote": true,
     "overrides": [
       {
         "files": "*.html",
