@@ -12,5 +12,5 @@ export const routes: Routes = [
 		title: "foxCal - About",
 		path: "about",
 		component: AboutView,
-	}
+	},
 ];

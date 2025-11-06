@@ -1,11 +1,9 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 @Component({
-  selector: 'app-about',
-  imports: [],
-  templateUrl: './about.view.html',
-  styles: ``,
+	selector: "app-about",
+	imports: [],
+	templateUrl: "./about.view.html",
+	styles: ``,
 })
-export class AboutView {
-
-}
+export class AboutView {}

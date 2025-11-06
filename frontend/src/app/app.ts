@@ -12,5 +12,4 @@ import { BaseLayout } from "~/layouts/base/base.layout";
 	`,
 	styles: [],
 })
-export class App {
-}
+export class App {}
